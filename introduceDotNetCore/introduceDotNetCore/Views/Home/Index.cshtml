@@ -1,0 +1,33 @@
+﻿@using introduceDotNetCore.Models
+@model IndexViewModel
+<html>
+<head>
+</head>
+<body>
+    <h3>Bu bizim Action</h3>
+    <p>@ViewBag.Ad</p>
+    @if (ViewBag.Saat <12)
+    {
+        <p>Günaydın!</p>
+    }
+    else
+    {
+        <p>İyi günler!</p>
+    }
+
+    <ul>
+        @foreach (var item in Model.Cities)
+        {
+            <li>@item</li>
+        }
+    </ul>
+
+    <ul>
+        @foreach (var product in Model.Products)
+        {
+            <li>@product.Name - @product.Description</li>
+
+        }
+    </ul>
+</body>
+</html>
