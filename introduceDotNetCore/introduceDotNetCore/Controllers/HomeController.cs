@@ -46,15 +46,18 @@ namespace introduceDotNetCore.Controllers
         public IActionResult Create(Product product)
         {
             //sayfada "ekle" butonuna bastığınızda çalışacak
-
+            if (ModelState.IsValid)
+            {
+                return View("Success", product);
+            }
 
             return View();
         }
-
-        public IActionResult Baska(double price)
-        {
-            return RedirectToAction("Index");
-        }
+        //[HttpPost]
+        //public IActionResult Baska(double price)
+        //{
+        //    return RedirectToAction("Index");
+        //}
 
 
 
