@@ -9,5 +9,7 @@ namespace introduceDotNetCore.Models
         [Display(Name = "Ürün Adı")]
         public string Name { get; set; }
         public string Description { get; set; }
+        [Range(1, 100, ErrorMessage = "en az 1 olmalı")]
+        public double Price { get; set; }
     }
 }

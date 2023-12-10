@@ -39,18 +39,21 @@ namespace introduceDotNetCore.Controllers
         public IActionResult Create()
         {
             //sayfayı oluşturur
-            var product = new Product { Name = "Test" };
-            return View(product);
+            //var product = new Product { Name = "Test" };
+            return View();
         }
         [HttpPost]
         public IActionResult Create(Product product)
         {
             //sayfada "ekle" butonuna bastığınızda çalışacak
-            //if (ModelState.IsValid)
-            //{
 
-            //}
+
             return View();
+        }
+
+        public IActionResult Baska(double price)
+        {
+            return RedirectToAction("Index");
         }
 
 
